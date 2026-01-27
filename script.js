@@ -40,7 +40,7 @@ document.getElementById("createForm").addEventListener("submit", async (e) => {
 
   if (!sender || !recipient || !message) return
 
-  const res = await fetch("http://localhost:3000/create", {
+  const res = await fetch("https://wf6v6xk3-3000.inc1.devtunnels.ms/create", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sender, recipient, message })
@@ -58,7 +58,7 @@ document.getElementById("enterForm").addEventListener("submit", async (e) => {
   const code = document.getElementById("codeInput").value.trim().toUpperCase()
   const errorMsg = document.getElementById("errorMsg")
 
-  const res = await fetch("http://localhost:3000/read", {
+  const res = await fetch("https://wf6v6xk3-3000.inc1.devtunnels.ms/read", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ code })
