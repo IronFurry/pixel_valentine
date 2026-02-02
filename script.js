@@ -1,3 +1,4 @@
+const API = "https://pixel-valentine-backend.onrender.com"
 // ---------- Screen logic ----------
 function showScreen(screenId) {
   document.querySelectorAll('.screen').forEach(screen => {
@@ -40,7 +41,6 @@ document.getElementById("createForm").addEventListener("submit", async (e) => {
 
   if (!sender || !recipient || !message) return
 
-  const API = "https://pixel-valentine-backend.onrender.com"
   const res = await fetch(`${API}/create`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
