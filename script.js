@@ -52,6 +52,12 @@ document.getElementById("createForm").addEventListener("submit", async (e) => {
   showScreen("codeScreen")
 })
 
+fetch(`${API}/stats`)
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("msgCount").innerText = data.count
+  })
+
 // ---------- READ MESSAGE ----------
 document.getElementById("enterForm").addEventListener("submit", async (e) => {
   e.preventDefault()
