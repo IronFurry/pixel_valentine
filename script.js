@@ -55,7 +55,7 @@ document.getElementById("createForm").addEventListener("submit", async (e) => {
 fetch(`${API}/stats`)
   .then(res => res.json())
   .then(data => {
-    document.getElementById("msgCount").innerText = data.count
+    document.getElementById("msgCount").innerText = data.msg_count
   })
 
 // ---------- READ MESSAGE ----------
