@@ -55,8 +55,13 @@ document.getElementById("createForm").addEventListener("submit", async (e) => {
 fetch(`${API}/stats`)
   .then(res => res.json())
   .then(data => {
-    document.getElementById("msgCount").innerText = data.msg_count
+    document.getElementById("msgCount").innerText = data.count
   })
+  .catch(err => {
+    console.error(err)
+    document.getElementById("msgCount").innerText = "0"
+  })
+
 
 // ---------- READ MESSAGE ----------
 document.getElementById("enterForm").addEventListener("submit", async (e) => {
