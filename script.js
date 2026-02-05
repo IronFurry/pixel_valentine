@@ -5,6 +5,14 @@ function showScreen(screenId) {
     screen.classList.remove('active')
   })
   document.getElementById(screenId).classList.add('active')
+
+  const counter = document.querySelector(".msg_counter_css")
+
+  if (screenId === "choiceScreen") {
+    counter.style.display = "block"
+  } else {
+    counter.style.display = "none"
+  }
 }
 
 function showChoiceScreen() {
